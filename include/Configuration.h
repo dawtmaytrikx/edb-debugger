@@ -71,6 +71,8 @@ public:
 	QString disassembly_font;
 	QString data_font;
 	bool data_show_address;
+	bool data_show_pointers;
+	bool data_show_hexpointers;
 	bool data_show_hex;
 	bool data_show_ascii;
 	bool data_show_comments;

@@ -804,6 +804,7 @@ void Debugger::createDataTab() {
 
 	// set the default view options
 	hexview->setShowAddress(config.data_show_address);
+	hexview->setShowPointers(config.data_show_hexpointers);
 	hexview->setShowHexDump(config.data_show_hex);
 	hexview->setShowAsciiDump(config.data_show_ascii);
 	hexview->setShowComments(config.data_show_comments);
@@ -1041,6 +1042,7 @@ void Debugger::closeEvent(QCloseEvent *event) {
 	settings.setValue("window.x", x());
 	settings.setValue("window.y", y());
 	settings.setValue("window.stack.show_address.enabled", stackView_->showAddress());
+	settings.setValue("window.stack.show_pointers.enabled", stackView_->showPointers());
 	settings.setValue("window.stack.show_hex.enabled", stackView_->showHexDump());
 	settings.setValue("window.stack.show_ascii.enabled", stackView_->showAsciiDump());
 	settings.setValue("window.stack.show_comments.enabled", stackView_->showComments());
@@ -1098,6 +1100,7 @@ void Debugger::showEvent(QShowEvent *) {
 	}
 
 	stackView_->setShowAddress(settings.value("window.stack.show_address.enabled", true).toBool());
+	stackView_->setShowPointers(settings.value("window.stack.show_pointers.enabled", true).toBool());
 	stackView_->setShowHexDump(settings.value("window.stack.show_hex.enabled", true).toBool());
 	stackView_->setShowAsciiDump(settings.value("window.stack.show_ascii.enabled", true).toBool());
 	stackView_->setShowComments(settings.value("window.stack.show_comments.enabled", true).toBool());

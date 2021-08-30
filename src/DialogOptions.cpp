@@ -203,6 +203,7 @@ void DialogOptions::showEvent(QShowEvent *event) {
 	ui.txtSessionDir->setText(config.session_path);
 
 	ui.chkDataShowAddress->setChecked(config.data_show_address);
+	ui.chkDataShowPointers->setChecked(config.data_show_pointers);
 	ui.chkDataShowHex->setChecked(config.data_show_hex);
 	ui.chkDataShowAscii->setChecked(config.data_show_ascii);
 	ui.chkDataShowComments->setChecked(config.data_show_comments);
@@ -337,6 +338,7 @@ void DialogOptions::closeEvent(QCloseEvent *event) {
 	config.min_string_length = ui.spnMinString->value();
 
 	config.data_show_address  = ui.chkDataShowAddress->isChecked();
+	config.data_show_pointers = ui.chkDataShowPointers->isChecked();
 	config.data_show_hex      = ui.chkDataShowHex->isChecked();
 	config.data_show_ascii    = ui.chkDataShowAscii->isChecked();
 	config.data_show_comments = ui.chkDataShowComments->isChecked();

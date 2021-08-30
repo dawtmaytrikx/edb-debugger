@@ -128,34 +128,41 @@
            </widget>
           </item>
           <item row="1" column="0" colspan="3">
+           <widget class="QCheckBox" name="chkDataShowPointers">
+            <property name="text">
+             <string>Show Pointers</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="3">
            <widget class="QCheckBox" name="chkDataShowHex">
             <property name="text">
              <string>Show Hex</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="3">
+          <item row="3" column="0" colspan="3">
            <widget class="QCheckBox" name="chkDataShowAscii">
             <property name="text">
              <string>Show ASCII</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="0" colspan="3">
+          <item row="4" column="0" colspan="3">
            <widget class="QCheckBox" name="chkDataShowComments">
             <property name="text">
              <string>Show Comments</string>
             </property>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="5" column="0">
            <widget class="QLabel" name="label_2">
             <property name="text">
              <string>Word Width</string>
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="5" column="1">
            <widget class="QComboBox" name="cmbDataWordWidth">
             <item>
              <property name="text">
@@ -192,14 +199,14 @@
             </property>
            </spacer>
           </item>
-          <item row="5" column="0">
+          <item row="6" column="0">
            <widget class="QLabel" name="label_6">
             <property name="text">
              <string>Row Width</string>
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
+          <item row="6" column="1">
            <widget class="QComboBox" name="cmbDataRowWidth">
             <item>
              <property name="text">
@@ -228,7 +235,7 @@
             </item>
            </widget>
           </item>
-          <item row="5" column="2">
+          <item row="6" column="2">
            <spacer>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -886,6 +893,7 @@
   <tabstop>rdoDetach</tabstop>
   <tabstop>rdoKill</tabstop>
   <tabstop>chkDataShowAddress</tabstop>
+  <tabstop>chkDataShowPointers</tabstop>
   <tabstop>chkDataShowHex</tabstop>
   <tabstop>chkDataShowAscii</tabstop>
   <tabstop>chkDataShowComments</tabstop>

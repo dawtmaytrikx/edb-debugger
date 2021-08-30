@@ -115,6 +115,8 @@ void Configuration::readSettings() {
 	registers_font          = settings.value("appearance.registers.font", default_font).toString();
 	disassembly_font        = settings.value("appearance.disassembly.font", default_font).toString();
 	data_show_address       = settings.value("appearance.data.show_address.enabled", true).toBool();
+	data_show_pointers      = settings.value("appearance.data.show_pointers.enabled", true).toBool();
+	data_show_hexpointers   = settings.value("appearance.data.show_hexpointers.enabled", false).toBool();
 	data_show_hex           = settings.value("appearance.data.show_hex.enabled", true).toBool();
 	data_show_ascii         = settings.value("appearance.data.show_ascii.enabled", true).toBool();
 	data_show_comments      = settings.value("appearance.data.show_comments.enabled", true).toBool();
@@ -232,6 +234,8 @@ void Configuration::writeSettings() {
 	settings.setValue("appearance.registers.font", registers_font);
 	settings.setValue("appearance.disassembly.font", disassembly_font);
 	settings.setValue("appearance.data.show_address.enabled", data_show_address);
+	settings.setValue("appearance.data.show_pointers.enabled", data_show_pointers);
+	settings.setValue("appearance.data.show_hexpointers.enabled", data_show_hexpointers);
 	settings.setValue("appearance.data.show_hex.enabled", data_show_hex);
 	settings.setValue("appearance.data.show_ascii.enabled", data_show_ascii);
 	settings.setValue("appearance.data.show_comments.enabled", data_show_comments);
